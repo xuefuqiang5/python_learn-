@@ -19,6 +19,12 @@ DIAL_CODES = [
 country_code = {country: code for code, country in DIAL_CODES}  
 #print(country_code)
 #change country name instead of upper 
-upper_country_code = {code:country.upper() for country, code in country_code.items()}
+upper_country_code = {country.upper():code for country, code in country_code.items()}
 #print(upper_country_code)
-print(upper_country_code[86])
+print(upper_country_code["CHINA"])
+
+
+def cant_find():
+    print("can't find!")
+print(upper_country_code.get('amrican', "can't find this key"))
+
